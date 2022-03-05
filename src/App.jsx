@@ -17,8 +17,8 @@ function App() {
           </li>
           <li>
             <div className="buscar">
-              <input placeholder="Buscar una raza"/>
-                <i className="fa-solid fa-magnifying-glass button iconBusqueda"></i>
+              <input placeholder="Buscar una raza" />
+              <i className="fa-solid fa-magnifying-glass button iconBusqueda"></i>
             </div>
           </li>
           <li>
@@ -33,21 +33,16 @@ function App() {
         <section>
           <h1>Perritos en Adopción</h1>
           <ul className="breedCardContainer">
+            <CardPerroAdopcion/>
             <li className="breedCard">
               <div className="contenedorImagen">
-                <img src={negrito} alt="Negrito"/>
-              </div>
-              <span className="breedTitle">Negrito</span>
-            </li>
-            <li className="breedCard">
-              <div className="contenedorImagen">
-                <img src={manchas} alt="Manchas"/>
+                <img src={manchas} alt="Manchas" />
               </div>
               <span className="breedTitle">Manchas</span>
             </li>
             <li className="breedCard">
               <div className="contenedorImagen">
-                <img src={ovejero} alt="Ovejero"/>
+                <img src={ovejero} alt="Ovejero" />
               </div>
               <span className="breedTitle">Ovejero</span>
             </li>
@@ -57,6 +52,17 @@ function App() {
       </main>
       <footer></footer>
     </div>
+  );
+}
+
+function CardPerroAdopcion() {
+  return (
+    <li className="breedCard">
+      <div className="contenedorImagen">
+        <img src={negrito} alt="Negrito" />
+      </div>
+      <span className="breedTitle">Negrito</span>
+    </li>
   );
 }
 
