@@ -33,19 +33,9 @@ function App() {
         <section>
           <h1>Perritos en Adopción</h1>
           <ul className="breedCardContainer">
-            <CardPerroAdopcion/>
-            <li className="breedCard">
-              <div className="contenedorImagen">
-                <img src={manchas} alt="Manchas" />
-              </div>
-              <span className="breedTitle">Manchas</span>
-            </li>
-            <li className="breedCard">
-              <div className="contenedorImagen">
-                <img src={ovejero} alt="Ovejero" />
-              </div>
-              <span className="breedTitle">Ovejero</span>
-            </li>
+            <CardPerroAdopcion nombre= 'Negrito' imagen={negrito} />
+            <CardPerroAdopcion nombre= 'Manchas' imagen={manchas} />
+            <CardPerroAdopcion nombre= 'Ovejero' imagen={ovejero} />
           </ul>
         </section>
         <section></section>
@@ -55,13 +45,13 @@ function App() {
   );
 }
 
-function CardPerroAdopcion() {
+function CardPerroAdopcion(props) {
   return (
     <li className="breedCard">
       <div className="contenedorImagen">
-        <img src={negrito} alt="Negrito" />
+        <img src={props.imagen} alt={props.nombre} />
       </div>
-      <span className="breedTitle">Negrito</span>
+      <span className="breedTitle">{props.nombre}</span>
     </li>
   );
 }
