@@ -3,9 +3,8 @@ import NegritoInfoPage from 'pages';
 import React from "react";
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  Routes,
+  Route
 } from "react-router-dom";
 import 'styles/styles.css';
 
@@ -13,14 +12,14 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Switch>
+        <Routes>
           <Route path='/negrito'>
             <NegritoInfoPage />
           </Route>
           <Route path='/'>
             <Index />
           </Route>
-        </Switch>
+        </Routes>
       </Router>
     </div>
   );
